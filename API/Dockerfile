@@ -1,20 +1,15 @@
-# Use an official Python runtime as a parent image
 FROM continuumio/miniconda3
-
-# Set the working directory to /home/app
 WORKDIR /home/app
+RUN apt-get update -y 
+RUN apt-get install nano unzip
+RUN apt-get install -y python3.10
+RUN apt install curl -y
 
-# Copy the current directory contents into the container at /app
+RUN curl -fsSL https://get.deta.dev/cli.sh | sh
+
+COPY requirements.txt /dependencies/requirements.txt
+RUN pip install -r /dependencies/requirements.txt
+
 COPY . /home/app
 
-# Clear the pip cache
-RUN pip cache purge
-
-# Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
-
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
-# Run app.py when the container launches
-CMD ["uvicorn", "api-app:app", "--host", "0.0.0.0", "--port", "80"]
+CMD gunicorn api-app:app  --bind 0.0.0.0:$PORT --worker-class uvicorn.workers.UvicornWorker # 👈 This is the most important line
