@@ -6,7 +6,7 @@ This repository contains two applications: an API and a Streamlit dashboard for 
 ## Links for certification
 [API App for Predictions](https://getaround-api-d08e0b37d9ea.herokuapp.com/docs#/Predictions/predict_predictions_post) : click on this link to access the API app.  
 [Delay Analysis Dashboard](https://getaround-dashboard-d00ca7766cd3.herokuapp.com/) : click on this link to access the dashboard app.  
-[Video presentation of the project]() : here is the video presentation of this project.
+[Video presentation of the project](https://share.vidyard.com/watch/rWhYH39d5h3zEuDHRevBHQ?) : here is the video presentation of this project.
 
 ## Table of Contents
 
