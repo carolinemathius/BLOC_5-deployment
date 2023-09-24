@@ -39,18 +39,21 @@ BLOC_5-deployment/
 │ ├── Procfile
 │ ├── api-app.py
 │ ├── best_model.pkl
-│ ├── heroky.yml
+│ ├── heroku.yml
 │ ├── preprocessor.pkl
 │ ├── requirements.txt
 │ └── runtime.txt
 │
 └── Dashboard/
-├── Dockerfile
-├── Procfile
-├── heroku.yml
-├── requirements.txt
-├── runtime.txt
-└── streamlit-app.py
+│ ├── Dockerfile
+│ ├── Procfile
+│ ├── heroku.yml
+│ ├── requirements.txt
+│ ├── runtime.txt
+│ └── streamlit-app.py
+│
+└── Getaround_analysis_notebook
+
 ```
 
 ## Getaround Rental Pricing Optimization API
